@@ -89,10 +89,10 @@
   <main class="login-card">
     <h1>Login</h1>
     <form id="login-form">
-      <label for="username">Username (required)</label>
+      <label for="username">Username</label>
       <input id="username" name="username" type="text" autocomplete="username" required>
 
-      <label for="password">Password (required)</label>
+      <label for="password">Password</label>
       <input id="password" name="password" type="password" autocomplete="current-password" required>
 
       <button type="submit">Sign in</button>
@@ -102,7 +102,7 @@
   <script>
     document.getElementById('login-form').addEventListener('submit', function (event) {
       event.preventDefault();
-      document.getElementById('form-status').textContent = 'Login is not connected yet.';
+      document.getElementById('form-status').textContent = 'Login functionality is currently unavailable.';
     });
   </script>
 </body>

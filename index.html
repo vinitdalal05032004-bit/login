@@ -76,6 +76,13 @@
       outline: 3px solid #93c5fd;
       outline-offset: 2px;
     }
+
+    .status-message {
+      margin: 10px 0 0;
+      color: #1f2937;
+      font-size: 0.85rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -90,10 +97,12 @@
 
       <button type="submit">Sign in</button>
     </form>
+    <p id="form-status" class="status-message" aria-live="polite"></p>
   </main>
   <script>
     document.getElementById('login-form').addEventListener('submit', function (event) {
       event.preventDefault();
+      document.getElementById('form-status').textContent = 'Login is not connected yet.';
     });
   </script>
 </body>

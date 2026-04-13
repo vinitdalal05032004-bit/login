@@ -66,17 +66,22 @@
     button:hover {
       background: #1d4ed8;
     }
+
+    button:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body>
   <main class="login-card">
     <h1>Login</h1>
-    <form>
+    <form action="/login" method="post">
       <label for="username">Username</label>
       <input id="username" name="username" type="text" autocomplete="username" required>
 
       <label for="password">Password</label>
-      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" required>
 
       <button type="submit">Sign in</button>
     </form>
